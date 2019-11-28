@@ -1,20 +1,34 @@
 package pl.krakow.uek.pp5.jkan.creditcardapp.model;
 
+import pl.krakow.uek.pp5.jkan.creditcardapp.model.dto.CreditCardDetailsDto;
+
 import java.math.BigDecimal;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class CreditCardFacade {
 
-    private final CreditCardStorage storage;
+    private final InMemoryCCStorage storage;
+    private String client;
 
-    CreditCardFacade(CreditCardStorage ccStorage) {
+    CreditCardFacade(InMemoryCCStorage ccStorage) {
         this.storage = ccStorage;
     }
 
-    public void withdrawFromCard(String creditCardNumber, BigDecimal withdrawValue) {
-        CreditCard loaded = storage.load(creditCardNumber);
-
-        loaded.withdraw(withdrawValue);
-
+    public void handle(WithdrawCommand withdrawCommand) {
+        CreditCard loaded = storage.load(withdrawCommand.getCreditCardNumber());
+        loaded.withdraw(withdrawCommand.getWithdrawValue());
         storage.add(loaded);
+    }
+//    public List<CreditCardDetailsDto> raport() {
+//        return storage.all().stream()
+//                .map(card -> CreditCardDetailsDto.of(card.getCardNumber, card.balance))
+//                .collect(Collectors.toList());
+//    }
+
+    public List<CreditCardDetailsDto> allCardsReport() {
+        return storage.loadAll().values().stream()
+                .map(CreditCard::details)
+                .collect(Collectors.toList());
     }
 }

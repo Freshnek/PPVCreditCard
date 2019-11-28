@@ -1,5 +1,6 @@
 package pl.krakow.uek.pp5.jkan.creditcardapp.model;
 
+import pl.krakow.uek.pp5.jkan.creditcardapp.model.dto.CreditCardDetailsDto;
 import pl.krakow.uek.pp5.jkan.creditcardapp.model.exceptions.CreditBelowMinimumValueException;
 import pl.krakow.uek.pp5.jkan.creditcardapp.model.exceptions.NotEnoughMoneyException;
 
@@ -38,5 +39,8 @@ class CreditCard {
 
     public BigDecimal currentBalance() {
         return cardBalance;
+    }
+    public CreditCardDetailsDto details() {
+        return new CreditCardDetailsDto(cardNumber, cardBalance);
     }
 }

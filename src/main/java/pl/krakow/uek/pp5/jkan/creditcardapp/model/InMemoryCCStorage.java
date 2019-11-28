@@ -17,4 +17,7 @@ class InMemoryCCStorage implements CreditCardStorage {
     public CreditCard load(String creditCardNumber) {
         return cards.get(creditCardNumber);
     }
+    public HashMap<String, CreditCard> loadAll() {
+        return cards;
+    }
 }
