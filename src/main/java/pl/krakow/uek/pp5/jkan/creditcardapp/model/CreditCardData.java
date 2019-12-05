@@ -13,6 +13,9 @@ public class CreditCardData {
         this.saldo = saldo;
     }
 
+    public CreditCardData() {
+    }
+
     public String getNumber() {
         return number;
     }
