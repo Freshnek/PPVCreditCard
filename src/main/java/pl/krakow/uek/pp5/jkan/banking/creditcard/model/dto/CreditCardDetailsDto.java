@@ -1,4 +1,4 @@
-package pl.krakow.uek.pp5.jkan.creditcardapp.model.dto;
+package pl.krakow.uek.pp5.jkan.banking.creditcard.model.dto;
 
 import java.math.BigDecimal;
 

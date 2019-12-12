@@ -1,6 +1,5 @@
-package pl.krakow.uek.pp5.jkan.creditcardapp.model;
+package pl.krakow.uek.pp5.jkan.banking.creditcard.model;
 
-import org.hibernate.validator.constraints.CreditCardNumber;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 

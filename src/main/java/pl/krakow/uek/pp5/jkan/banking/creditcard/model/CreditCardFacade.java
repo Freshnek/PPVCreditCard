@@ -1,8 +1,7 @@
-package pl.krakow.uek.pp5.jkan.creditcardapp.model;
+package pl.krakow.uek.pp5.jkan.banking.creditcard.model;
 
-import pl.krakow.uek.pp5.jkan.creditcardapp.model.dto.CreditCardDetailsDto;
+import pl.krakow.uek.pp5.jkan.banking.creditcard.model.dto.CreditCardDetailsDto;
 
-import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 

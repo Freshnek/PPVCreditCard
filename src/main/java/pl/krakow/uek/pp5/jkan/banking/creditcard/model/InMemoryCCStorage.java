@@ -1,6 +1,5 @@
-package pl.krakow.uek.pp5.jkan.creditcardapp.model;
+package pl.krakow.uek.pp5.jkan.banking.creditcard.model;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;

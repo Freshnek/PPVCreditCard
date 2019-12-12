@@ -1,8 +1,6 @@
-package pl.krakow.uek.pp5.jkan.creditcardapp.model;
+package pl.krakow.uek.pp5.jkan.banking.creditcard.model;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 interface CreditCardStorage {
     void add(CreditCard card);
